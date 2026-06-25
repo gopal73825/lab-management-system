@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Plus, Pencil, Trash2, Eye, Cpu } from "lucide-react";
 import { systemService } from "@/services/systemService";
 import { labService } from "@/services/labService";
-import type { System, Lab } from "@/types";
+import type { System } from "@/types";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SearchInput } from "@/components/ui/SearchInput";
 import { StatusBadge } from "@/components/ui/Badge";

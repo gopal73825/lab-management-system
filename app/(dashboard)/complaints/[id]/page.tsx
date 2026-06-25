@@ -38,15 +38,16 @@ export default function ComplaintDetailPage() {
   const [remarks, setRemarks] = useState("");
   const [updating, setUpdating] = useState(false);
 
-  const load = async () => {
-    const c = await complaintService.getById(id);
+  const load = async (loadId: string) => {
+    const c = await complaintService.getById(loadId);
     setComplaint(c);
     if (c?.labId) setLab(await labService.getById(c.labId));
     if (c?.systemId) setSystem(await systemService.getById(c.systemId));
     setLoading(false);
   };
 
-  useEffect(() => { load(); }, [id]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { load(id); }, [id]);
 
   const handleStatusUpdate = async () => {
     if (!complaint?.id) return;
@@ -59,7 +60,7 @@ export default function ComplaintDetailPage() {
       await complaintService.update(complaint.id, updateData);
       toast.success("Status updated!");
       setStatusOpen(false);
-      load();
+      load(id);
     } catch { toast.error("Update failed"); }
     finally { setUpdating(false); }
   };

@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Plus, Eye, Trash2, ShoppingCart } from "lucide-react";
+import { Plus, Trash2, ShoppingCart } from "lucide-react";
 import { purchaseService } from "@/services/purchaseService";
 import { vendorService } from "@/services/vendorService";
-import type { Purchase, Vendor } from "@/types";
+import type { Purchase } from "@/types";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SearchInput } from "@/components/ui/SearchInput";
 import { ConfirmModal } from "@/components/ui/Modal";

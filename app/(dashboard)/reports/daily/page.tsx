@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Plus, Trash2, FileText, Download } from "lucide-react";
+import { Plus, Trash2, FileText } from "lucide-react";
 import { reportService } from "@/services/reportService";
 import type { DailyReport } from "@/types";
 import { PageHeader } from "@/components/ui/PageHeader";

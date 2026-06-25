@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { Plus, Pencil, Trash2, Store, ExternalLink } from "lucide-react";
 import { vendorService } from "@/services/vendorService";
 import type { Vendor } from "@/types";
